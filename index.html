@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue sample</title>
+</head>
+<body>
+<div id="app">
+<p>単体のチェックボックス</p>
+<p><input type="checkbox" v-model="checked" id="checkbox"><label for="checkbox">{{checked}}</label></p>
+
+<p>複数のチェックボックス</p>
+<p><input type="checkbox" v-model="colors" id="checkbox1" value="red"><label for="checkbox1">red</label></p>
+<p><input type="checkbox" v-model="colors" id="checkbox2" value="green"><label for="checkbox2">green</label></p>
+<p><input type="checkbox" v-model="colors" id="checkbox3" value="blue"><label for="checkbox3">blue</label></p>
+<p>{{ colors }}</p>
+
+<p>ラジオボタン</p>
+<p><input type="radio" name="radio" id="radio1" v-model="color" value="red">red
+<input type="radio" name="radio" id="radio2" v-model="color" value="blue">blue
+</p>
+<p>{{ color }}</p>
+
+<p>セレクト単体</p>
+<p>
+<select name="select1" id="select1" v-model="size">
+<option disable value="">選択してください</option>
+<option value="small">small</option>
+<option value="medium">medium</option>
+<option value="big">big</option>
+</select>
+</p>
+<p>{{ size }}</p>
+
+<p>セレクト複数選択</p>
+<p>
+<select name="select1" id="select1" v-model="size2" multiple>
+<option disable value="">選択してください</option>
+<option value="small">small</option>
+<option value="medium">medium</option>
+<option value="big">big</option>
+</select>
+</p>
+<p>{{ size2 }}</p>
+<p>1行入力ボックス</p>
+<p><input type="text" v-model="message"></p>
+<p>{{ message }}</p>
+
+<p>複数行入力ボックス</p>
+<p><textarea v-model="message2" name="message" id="" cols="30" rows="10"></textarea></p>
+<p>{{message2}}</p>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="main.js"></script>	
+</body>
+</html>
